@@ -4,6 +4,7 @@
 class number_bucket {
 public:
     number_bucket();
+    number_bucket(int n, int size, bool empty);
 
     bool ifEmpty();
     void push(int n);
@@ -11,7 +12,7 @@ public:
     int get_size();
 
 private:
-
+    double n;
 };
 
 #endif //ASSIGNMENT_1_NUMBER_BUCKET_H
