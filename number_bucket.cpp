@@ -7,13 +7,13 @@
 number_bucket::number_bucket() {
     n = 0;
     size = 0;
-    empty = 0;
+    empty = true;
 }
 
 number_bucket::number_bucket(int n, int size, bool empty) {
-    get_size(n);
-    get_size(size);
-
+    this->n = 0;
+    this->size = 0;
+    this->empty = true;
 }
 
 bool number_bucket::ifEmpty() const {
