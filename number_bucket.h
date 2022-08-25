@@ -13,6 +13,8 @@ public:
 
 private:
     double n;
+    int size;
+    bool empty;
 };
 
 #endif //ASSIGNMENT_1_NUMBER_BUCKET_H
