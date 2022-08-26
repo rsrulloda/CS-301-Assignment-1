@@ -1,20 +1,25 @@
+// Study Group 7 (Alex Milanez, John Edwin Karel Delgado, Ronell Sean Rulloda)
+
 #ifndef ASSIGNMENT_1_NUMBER_BUCKET_H
 #define ASSIGNMENT_1_NUMBER_BUCKET_H
 
 class number_bucket {
 public:
     number_bucket();
-    number_bucket(int n, int size, bool empty);
+    number_bucket(int size);
+    ~number_bucket();
 
-    bool ifEmpty();
     void push(int n);
-    void pop();
-    int get_size();
+    int pop();
+    int peek();
+
+    bool isEmpty();
+    int getSize();
 
 private:
-    double n;
+    int *arr;
+    int top;
     int size;
-    bool empty;
 };
 
 #endif //ASSIGNMENT_1_NUMBER_BUCKET_H
