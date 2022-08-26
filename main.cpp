@@ -32,7 +32,7 @@ switch(ch)
 
 case '1':
 
-stackTest.ifEmpty();
+//stackTest.ifEmpty(); //wasnt implemented correct
 
 break;
 
