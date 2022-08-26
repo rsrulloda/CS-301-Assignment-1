@@ -4,14 +4,14 @@
 #include <iostream>
 
 number_bucket::number_bucket() {
-    arr = new int[0];
+    arr = new int[10];
     size = 0;
     top = -1;
 }
 
-number_bucket::number_bucket(int size) {
-    arr = new int[size];
-    this->size = size;
+number_bucket::number_bucket(int size1) {
+    arr = new int[size1];
+    size = size1;
     top = -1;
 }
 
@@ -20,8 +20,8 @@ number_bucket::~number_bucket() {
 }
 
 void number_bucket::push(int n) {
-    if(!isEmpty()) {
-        throw "Stack is full";
+    if(isFull()) {
+        std::cout << "Cannot Push. ";
     } else {
         arr[++top] = n;
     }
@@ -29,7 +29,7 @@ void number_bucket::push(int n) {
 
 int number_bucket::pop() {
     if(isEmpty()) {
-        throw "Stack is empty";
+        return 0;
     } else {
         return arr[top--];
     }
@@ -37,17 +37,21 @@ int number_bucket::pop() {
 
 int number_bucket::peek() {
     if (isEmpty()) {
-        throw "Stack is empty";
+        return 0;
     }
     else {
         return arr[top];
     }
 }
 
-bool number_bucket::isEmpty()  {
+bool number_bucket::isEmpty() const{
     return (top < 0);
 }
 
-int number_bucket::getSize() {
+bool number_bucket::isFull() const {
+    return top == size -1;
+}
+
+int number_bucket::getSize() const{
     return top + 1;
 }
