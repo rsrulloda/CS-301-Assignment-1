@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
 
-number_bucket stackTest; //declare the instance of stack
+number_bucket stackTest(10); //declare the instance of stack
 
 char ch;
 
@@ -22,7 +22,7 @@ while(ch!='n')
 
 {
 
-cout<<"\nEnter choice\n 1. Check stack \n 2. push\n 3.pop\n 4. check size\n";
+cout<<"\nEnter choice\n 1. Check stack \n 2. push\n 3. pop\n 4. check size\n 5. peek\n";
 
 cin>> ch;
 
@@ -32,7 +32,7 @@ switch(ch)
 
 case '1':
 
-//stackTest.ifEmpty(); //wasnt implemented correct
+stackTest.isEmpty();
 
 break;
 
@@ -54,7 +54,13 @@ break;
 
 case '4':
 
-stackTest.get_size();
+cout << stackTest.getSize();
+
+break;
+
+case '5':
+
+cout << stackTest.peek();
 
 break;
 
