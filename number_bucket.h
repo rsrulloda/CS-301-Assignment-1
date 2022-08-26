@@ -6,15 +6,16 @@
 class number_bucket {
 public:
     number_bucket();
-    number_bucket(int size);
+    number_bucket(int size = 10);
     ~number_bucket();
 
     void push(int n);
     int pop();
     int peek();
 
-    bool isEmpty();
-    int getSize();
+    bool isEmpty() const;
+    bool isFull() const;
+    int getSize() const;
 
 private:
     int *arr;
