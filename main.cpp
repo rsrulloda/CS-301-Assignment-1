@@ -32,7 +32,7 @@ switch(ch)
 
 case '1':
 
-stackTest.isEmpty();
+cout << boolalpha << stackTest.isEmpty();
 
 break;
 
