@@ -14,10 +14,11 @@ The number of items in the vector may be determined using size(). The function r
 |                      |               |                  |
 
 Functions planned to implement:
-* bool ifEmpty()
-* void push(int n)
-* void pop()
-* int get_size()
+* void push(int n);
+* int pop();
+* int peek();
+* bool isEmpty();
+* int getSize();
 
 #
 ## Output Screenshots
