@@ -29,6 +29,11 @@ Functions planned to implement:
 
 #
 ## Output Screenshots
+Check Stack if Empty
 ![img1.png](screenshots/checkEmpty.png)
+
+GetSize
 ![img2.png](screenshots/getSize.png)
+
+Peek
 ![img3.png](screenshots/peek.png)
